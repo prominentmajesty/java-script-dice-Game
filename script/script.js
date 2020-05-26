@@ -33,7 +33,7 @@ activePlayer = 1 ;
 
 console.log(dice);
 document.querySelector('#current-' + activePlayer).textContent = dice;
-//document.quer ySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
 var x = document.querySelector('#score-0').textContent;
 document.querySelector('.dice').style.display = 'none';
 
@@ -41,5 +41,6 @@ document.querySelector('.dice').style.display = 'none';
  document.querySelector('.btn-roll').addEventListener('click', function(){
  var dice = Math.floor(Math.random() * 6) + 1;
 
- document.querySelector('.dice').style.display = 'block';
+ var diceDom = document.querySelector('.dice');
+ diceDom.style.display = 'block';
  });
