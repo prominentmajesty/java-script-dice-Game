@@ -24,10 +24,22 @@ jane.calculateAge();
 var mark = new Person('Mark', 1969, 'retired')
 mark.calculateAge();}*/
 
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 
 scores = [0,0];
 roundScore = 0; 
-activePlayer = 0;
+activePlayer = 1 ;
 
-dice = 6;
+
+console.log(dice);
+document.querySelector('#current-' + activePlayer).textContent = dice;
+//document.quer ySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+var x = document.querySelector('#score-0').textContent;
+document.querySelector('.dice').style.display = 'none';
+
+
+ document.querySelector('.btn-roll').addEventListener('click', function(){
+ var dice = Math.floor(Math.random() * 6) + 1;
+
+ document.querySelector('.dice').style.display = 'block';
+ });
